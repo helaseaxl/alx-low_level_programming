@@ -1,24 +1,24 @@
-#include "main.h"
 /**
- * _strcmp - compare string values
- * @s1: input value
- * @s2: input value
- *
- * Return: s1[i] - s2[i]
+ * _strcmp - program startup
+ * @s1: first pointer being evaluated
+ * @s2: second pointer being evaluated
+(*
+ * Description: compares two strings)?
+ * Return: return (0) is the required function signature
  */
+
+#include "main.h"
 int _strcmp(char *s1, char *s2)
 {
-	int i;
+	int string;
 
-
-	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0')
+	for (string = 0; s1[string] != '\0' && s2[string] != '\0'; string++)
 	{
-		if (s1[i] != s2[i])
+		if (*s1 - *s2 == 0)
 		{
-			return (s1[i] - s2[i]);
+			s1++;
+			s2++;
 		}
-	i++;
 	}
-	return (0);
+	return (*s1 - *s2);
 }

@@ -1,29 +1,32 @@
-#include "main.h"
 /**
- * _strspn - Entry point
- * @s: input
- * @accept: input
- * Return: Always 0 (Success)
+ * _strspn - program startup
+ * @s: first pointer being evaluated
+ * @accept: second pointer being evaluated
+(*
+ * Description: gets the length of a prefix substring)?
+ * Return: return (0) is the required function signature
  */
+
+#include "main.h"
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int n = 0;
-	int r;
-
+	char *byte = s;
+	char *segment;
 
 	while (*s)
 	{
-		for (r = 0; accept[r]; r++)
+		for (segment = accept; *segment; segment++)
 		{
-			if (*s == accept[r])
+			if (*s == *segment)
 			{
-				n++;
 				break;
 			}
-			else if (accept[r + 1] == '\0')
-				return (n);
+		}
+		if (*segment == '\0')
+		{
+			break;
 		}
 		s++;
 	}
-	return (n);
+	return (s - byte);
 }
