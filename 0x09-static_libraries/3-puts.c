@@ -1,13 +1,18 @@
+/**
+ * _puts - program startup
+ * @str: pointer being evaluated
+(*
+ * Description: prints a string followed by a new line
+ * to the standard output)?
+ * Return: return (0) is the required function signature
+ */
+
 #include "main.h"
 void _puts(char *str)
-#include<stdio.h>
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle");
-	return (0);
+	while (*str)
+	{
+		_putchar(*str++);
+	}
+	_putchar('\n');
 }
