@@ -1,11 +1,22 @@
-#include "main.h"
-		
 /**
- * _isdigit - checks for a digit (0 through 9)
- * @c: int to be checked
- * Return: 1 if c is a digit, 0 otherwise
+ * _isdigit - program startup
+ * @c: int being evaluated
+(*
+ * Description: checks for a digit between `0` and `9`
+ * and returns `1` if `c` is a digit between `0` and `9`
+ * and returns `0` otherwise)?
+ * Return: return (0) exits program successfully, return (1) throws an error
  */
+
+#include "main.h"
 int _isdigit(int c)
 {
-	return (c >= '0' && c <= '9');
+	if (c >= '0' && c <= '9')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

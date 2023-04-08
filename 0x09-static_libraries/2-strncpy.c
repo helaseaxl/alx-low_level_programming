@@ -1,29 +1,29 @@
-#include "main.h"
 /**
- * _strncpy - copy a string
- * @dest: input value
- * @src: input value
- * @n: input value
- *
- * Return: dest
+ * *_strncpy - program startup
+ * @dest: first pointer being evaluated
+ * @src: second pointer being evaluated
+ * @n: int being evaluated
+(*
+ * Description: copies two strings)?
+ * Return: return (0) is the required function signature
  */
+
+#include "main.h"
 char *_strncpy(char *dest, char *src, int n)
 {
-	int j;
+	int length;
 
-
-	j = 0;
-	while (j < n && src[j] != '\0')
+	for (length = 0; length < n; length++)
 	{
-		dest[j] = src[j];
-		j++;
+		dest[length] = src[length];
+		if (src[length] == '\0')
+		{
+			while (length < n)
+			{
+				dest[length] = '\0';
+				length++;
+			}
+		}
 	}
-	while (j < n)
-	{
-		dest[j] = '\0';
-		j++;
-	}
-
-
 	return (dest);
 }
